@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Scrumptious Bites</title>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+    <div class="box">
+        <h2>Login</h2>
+        <form id="login-form">
+    <input type="text" id="login-username" placeholder="Enter Username" required>
+    <input type="password" id="login-password" placeholder="Enter Password" required>
+    <button type="submit">Login</button>
+</form>
+
+        <p>Don't have an account?
+            <a href="sign_up.html">Sign up</a>
+            </p>
+
+    </div>
+    </div>
+
+    <script>
+document.getElementById("login-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let username = document.getElementById("login-username").value;
+    let password = document.getElementById("login-password").value;
+
+    let savedUser = JSON.parse(localStorage.getItem("user"));
+
+    if (savedUser && username === savedUser.username && password === savedUser.password) {
+        alert("Login successful!");
+
+        localStorage.setItem("isLoggedIn", true);
+
+        window.location.href = "main.html";
+    } else {
+        alert("Invalid username or password ❌");
+    }
+});
+</script>
+</body>
+</html>

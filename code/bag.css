@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+}
+
+header {
+  background: #fff;
+  padding: 15px 30px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff6b35;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin: 20px;
+}
+
+#cart-items {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cart-item {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cart-details h4 {
+  margin: 0;
+}
+
+.cart-details p {
+  color: #ff6b35;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Bill */
+.bill {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.bill p, .bill h2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.bill h2 {
+  color: #ff6b35;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e85a2a;
+}
+
+.cart-item {
+  position: relative;
+  padding: 20px 10px 10px 10px;
+}
+
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff6b35;
+  color: white;
+  border: none;
+  font-size: 10px;
+  padding: 5px 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.remove-btn:hover {
+  background: #e85a2a;
+  transform: scale(1.1);
+}
+
+.order-btn {
+  display: block;
+  margin: 10px auto;
+  padding: 12px 25px;
+  background: green;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.order-btn:hover {
+  background: darkgreen;
+}
+
+.order-box {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}

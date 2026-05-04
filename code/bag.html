@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery Website</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+
+        <link rel="stylesheet" href="bag.css">
+</head>
+
+<body>
+
+    <!--Navbar-->
+    <header>
+        <h1 class="logo">Scrumptious Bites</h1>
+        <nav>
+            <a href="main.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="login.html">Login</a>
+        </nav>
+        </header>
+    
+        <h2 class="title">🛒 Your Cart</h2>
+
+<!-- Cart Items -->
+<div id="cart-items"></div>
+
+<!-- Bill Section -->
+<div class="bill">
+  <p><span>Subtotal:</span> <span id="subtotal">₹0</span></p>
+  <p><span>Delivery:</span> <span id="delivery">₹40</span></p>
+  <p><span>GST (5%):</span> <span id="gst">₹0</span></p>
+  <h2><span>Total:</span> <span id="total">₹0</span></h2>
+</div>
+
+<button onclick="clearCart()">Clear Cart</button>
+<button onclick="placeOrder()" class="order-btn">Place Order</button>
+    
+
+    
+
+    <main>
+      <div class="bag-page">
+        <div class="bag-items-container">
+        </div>
+        <div class="bag-summary">
+            
+
+        </div>
+      </div>
+    </main>
+
+    <!--Footer-->
+
+    <footer class="footer">
+    <div class="footer-container">
+
+        <!-- Brand -->
+        <div class="footer-section">
+            <h2>Scrumptious Bites</h2>
+            <p>Delivering happiness at your doorstep 🍔</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="main.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="login.html">Login</a>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: support@scrumptiousbites.com</p>
+            <p>Phone: +91 98765 43210</p>
+            <p>Location: Punjab, India</p>
+        </div>
+
+        <!-- Social -->
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <p>📘 Facebook</p>
+            <p>📸 Instagram</p>
+            <p>🐦 Twitter</p>
+        </div>
+
+    </div>
+
+    <p class="footer-bottom">
+        © 2026 Scrumptious Bites. All rights reserved.
+    </p>
+</footer>
+
+    <script src="bag.js"></script>
+</body>
+
+</html>

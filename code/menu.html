@@ -308,5 +308,26 @@
 </footer>
 
 <script src="cart.js"></script>
+<script>
+const searchInput = document.querySelector(".search_input");
+
+searchInput.addEventListener("keyup", function () {
+
+    let filter = searchInput.value.toLowerCase();
+
+    let foodItems = document.querySelectorAll(".food-item");
+
+    foodItems.forEach(item => {
+
+        let foodName = item.querySelector("h3").innerText.toLowerCase();
+
+        if (foodName.includes(filter)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+    });
+});
+</script>
 </body>
 </html>

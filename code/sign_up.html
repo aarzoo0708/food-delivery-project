@@ -24,22 +24,38 @@
         </p>
     </div>
     </div>
-
     <script>
-document.getElementById("signup-form").addEventListener("submit", function(e) {
+document.getElementById("signup-form")
+.addEventListener("submit", function(e){
+
     e.preventDefault();
 
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+    let username =
+    document.getElementById("username").value;
+
+    let password =
+    document.getElementById("password").value;
+
+    let passwordRegex =
+    /^(?=.*[A-Z])(?=.*[0-9]).{6,}$/;
+
+    if(!passwordRegex.test(password)){
+
+        alert(
+        "Password must contain:\n1 Capital Letter\n1 Number\nMinimum 6 characters"
+        );
+
+        return;
+    }
 
     let user = {
-        username: username,
-        password: password
+        username,
+        password
     };
 
     localStorage.setItem("user", JSON.stringify(user));
 
-    alert("Account created successfully!");
+    alert("Account Created Successfully");
 
     window.location.href = "login.html";
 });

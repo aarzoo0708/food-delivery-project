@@ -87,26 +87,49 @@ function clearCart() {
 renderCart();
 
 function placeOrder() {
+
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+  let address = document.getElementById("address").value;
+
   if (cart.length === 0) {
+
     alert("Cart is empty ❌");
+
     return;
   }
 
+  if (address.trim() === "") {
+
+    alert("Please enter delivery address 📍");
+
+    return;
+  }
+
+  // Existing orders
   let orders = JSON.parse(localStorage.getItem("orders")) || [];
 
+  // New Order Object
   let newOrder = {
+
     items: cart,
-    date: new Date().toLocaleString()
+
+    address: address,
+
+    date: new Date().toLocaleString(),
+
+    orderTime: new Date().getTime()
   };
 
+  // Save order
   orders.push(newOrder);
+
   localStorage.setItem("orders", JSON.stringify(orders));
 
+  // Clear cart
   localStorage.removeItem("cart");
 
-  alert("Order Placed Successfully 🎉");
+  alert("🎉 Order Placed Successfully");
 
   window.location.href = "order_history.html";
 }

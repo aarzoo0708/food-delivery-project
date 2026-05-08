@@ -22,6 +22,9 @@
             <a href="about_us.html">About Us</a>
             <a href="menu.html">Menu</a>
             <a href="login.html">Login</a>
+            <button class="logout-btn" onclick="logout()">
+    Logout
+</button>
         </nav>
     
 
@@ -40,7 +43,8 @@
 
 
      </header>
-
+     <div id="loader"></div>
+        <h3 id="welcome-user"></h3>     
     <!--Home page-->
     <section class="homepage" id="home">
         <div class="text">
@@ -120,6 +124,30 @@ if (isLoggedIn && user) {
 
   function goToOrders() {
   window.location.href = "order_history.html";
+}
+
+
+if(user){
+
+    document.getElementById("welcome-user").innerText =
+    "Welcome, " + user.username + " 👋";
+}
+
+window.addEventListener("load", () => {
+
+    document.getElementById("loader").style.display = "none";
+});
+
+function logout(){
+
+    // Remove login status
+    localStorage.removeItem("isLoggedIn");
+
+    // Optional success message
+    alert("Logged out successfully 👋");
+
+    // Redirect to login page
+    window.location.href = "login.html";
 }
 
 </script>
